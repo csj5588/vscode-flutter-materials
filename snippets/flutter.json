@@ -1,0 +1,28 @@
+{
+  "Flutter Widget": {
+		"scope": "dart",
+		"prefix": "fl_widget",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"import 'package:flutter_screenutil/flutter_screenutil.dart';",
+			"",
+			"class $1 extends StatefulWidget {",
+			"  @override",
+			"  State<StatefulWidget> createState() {",
+			"    return $1State();",
+			"  }",
+			"}",
+			"",
+			"class $1State extends State<$1> {",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return Center(",
+			"      child: Text('$1'),",
+			"    );",
+			"  }",
+			"}",
+			"",
+		],
+		"description": "生成Flutter StateFulWidget"
+	},
+}
