@@ -4,8 +4,9 @@
 	"description": "flutter 物料",
 	"keywords": ["vscode", "flutter", "dart", "materials"],
 	"publisher": "csj5588",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"repository": "https://github.com/csj5588/vscode-flutter-materials",
+	"icon": "images/logo.png",
 	"engines": {
 		"vscode": "^1.40.1"
 	},
