@@ -1,7 +1,7 @@
 {
   "Flutter Widget": {
 		"scope": "dart",
-		"prefix": "fl_widget",
+		"prefix": "fl_ful_widget",
 		"body": [
 			"import 'package:flutter/material.dart';",
 			"import 'package:flutter_screenutil/flutter_screenutil.dart';",
@@ -21,8 +21,30 @@
 			"    );",
 			"  }",
 			"}",
-			"",
+			""
 		],
 		"description": "生成Flutter StateFulWidget"
 	},
+	"Flutter Widget Less": {
+		"scope": "dart",
+		"prefix": "fl_less_widget",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"import 'package:flutter_screenutil/flutter_screenutil.dart';",
+			"",
+			"class $1 extends StatelessWidget {",
+			"",
+			"  $1();",
+			"",
+			"  @override",
+			"  Widget build(BuildContext context) {",
+			"    return Center(",
+			"      child: Text('$1'),",
+			"    );",
+			"  }",
+			"}",
+			""
+		],
+		"description": "生成Flutter StateFulWidgetLess"
+	}
 }
