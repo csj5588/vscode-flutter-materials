@@ -6,7 +6,7 @@ Flutter物料 vscode插件，可以一键生成物料
 
 ### Use
 
-在需要生成物料的文件夹上，鼠标右键点击。
+在需要生成物料的文件夹上，鼠标右键点击，选择Materials Install。
 
 ![](images/operate_1.gif);
 
