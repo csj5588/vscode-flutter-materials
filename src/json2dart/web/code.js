@@ -391,6 +391,7 @@ $(function () {
 
       let rootClass = $('#classNameTextField').val();
       let dartCode = `///@author: xxx\n${objToDart(jsonObj, rootClass, "")}`;
+      // let beautifyDartCode = dartCode;
       let beautifyDartCode = js_beautify(dartCode, { indent_size: 2, space_in_empty_paren: true });
       resultDartCode = beautifyDartCode;
       let highlightDartCode = hljs.highlight('dart', beautifyDartCode);
