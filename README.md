@@ -43,6 +43,15 @@ Flutter物料 vscode插件，可以一键生成物料
 | fl_container | Container组件片段 |
 | fl_expanded | Expanded组件片段 |
 
+## JsonToDart
+
+### Use
+
+```shell
+command/ctrl + shift + p
+```
+输入 JSON TO DART 即可唤起内置工具
+
 ## Optimized
 
 - 物料名称统一替换
