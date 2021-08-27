@@ -22,7 +22,7 @@ class MaterialsState extends State<Materials> {
       () => MaterialsController(),
     );
     // [request]
-    _controller.getData();
+    // _controller.getData();
 
     super.initState();
   }
