@@ -31,10 +31,13 @@ Flutter物料 vscode插件，可以一键生成物料
 
 ### Documents
 
-| 代码片段命令 | 描述 |
+| 模版代码片段命令 | 描述 |
 | --- | --- |
 | fl_ful_widget | 完整fulWidget片段 |
 | fl_less_widget | 完整lessWidget片段 |
+
+| 组件代码片段命令 | 描述 |
+| --- | --- |
 | fl_text | Text组件片段 |
 | fl_tabbar | TabBar组件片段 |
 | fl_row | Row组件片段 |
@@ -42,6 +45,12 @@ Flutter物料 vscode插件，可以一键生成物料
 | fl_stack | Stack定位组件片段 |
 | fl_container | Container组件片段 |
 | fl_expanded | Expanded组件片段 |
+
+| 语法代码片段命令 | 描述 |
+| --- | --- |
+| fl_initstate | initState语法片段 |
+| fl_dispose | dispose语法片段 |
+| fl_didmount | addPostFrameCallback语法片段 |
 
 ## JsonToDart
 
@@ -51,6 +60,8 @@ Flutter物料 vscode插件，可以一键生成物料
 command/ctrl + shift + p
 ```
 输入 JSON TO DART 即可唤起内置工具
+
+![](images/json2dart.jpg)
 
 ## Optimized
 
