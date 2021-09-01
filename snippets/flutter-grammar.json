@@ -1,0 +1,37 @@
+{
+  "Flutter-Grammar-InitState": {
+		"scope": "dart",
+		"prefix": "fl_initstate",
+		"body": [
+			"@override",
+			"void initState() {",
+			"  $1",
+			"  // TODO: implement initState",
+			"  super.initState();",
+			"}"
+		],
+		"description": "initState语法"
+	},
+	"Flutter-Grammar-Dispose": {
+		"scope": "dart",
+		"prefix": "fl_dispose",
+		"body": [
+			"@override",
+			"void dispose() {",
+			"  $1",
+			"  super.initState();",
+			"}"
+		],
+		"description": "dispose语法"
+	},
+	"Flutter-Grammar-DidMount": {
+		"scope": "dart",
+		"prefix": "fl_didmount",
+		"body": [
+			"WidgetsBinding.instance.addPostFrameCallback((mag) {",
+			"  $1",
+			"});"
+		],
+		"description": "addPostFrameCallback(didmount)语法"
+	}
+}
