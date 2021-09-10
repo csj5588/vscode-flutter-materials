@@ -22,6 +22,10 @@ Flutter物料 vscode插件，可以一键生成物料
 | flutter | widget-full.dart | 生成fulState页面 |
 | flutter | widget-less.dart | 生成lessState页面 |
 | react | antd-redux-3.12.1 | 生成react增删查改物料 |
+| react | class-less-1.0 | 生成react组件物料 |
+| react | class-1.0 | 生成react组件物料 |
+| react | hooks-less-1.0 | 生成react组件物料 |
+| react | hooks-1.0 | 生成react组件物料 |
 
 ## Snippets
 
