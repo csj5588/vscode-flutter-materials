@@ -28,6 +28,12 @@ class MaterialsState extends State<Materials> {
   }
 
   @override
+  void dispose() {
+    Get.delete<ImOrderBarController>();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFFF3F4F9),
