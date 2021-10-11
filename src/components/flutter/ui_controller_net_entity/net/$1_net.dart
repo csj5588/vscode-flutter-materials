@@ -8,6 +8,7 @@ class MaterialsNet {
     // [params]
     Map map = {};
     // [request]
+    throw new UnimplementedError('if has request, del this line!');
     ZXResponseModel res = await request.get(map, '/your/apis');
     // [intercept]
     if (res.isSuccessful && WTMapUtil.isNotEmpty(res.data)) {
