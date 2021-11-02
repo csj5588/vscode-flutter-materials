@@ -1,5 +1,5 @@
 class MaterialsData {
-  int name;
+  int? name;
 
   MaterialsData({this.name});
 

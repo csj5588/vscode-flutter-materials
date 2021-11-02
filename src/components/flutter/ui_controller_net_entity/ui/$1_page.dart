@@ -13,7 +13,7 @@ class Materials extends StatefulWidget {
 }
 
 class MaterialsState extends State<Materials> {
-  MaterialsController _controller;
+  MaterialsController _controller = MaterialsController();
 
   @override
   void initState() {
@@ -29,7 +29,7 @@ class MaterialsState extends State<Materials> {
 
   @override
   void dispose() {
-    Get.delete<ImOrderBarController>();
+    Get.delete<MaterialsController>();
     super.dispose();
   }
 

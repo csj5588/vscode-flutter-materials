@@ -7,7 +7,7 @@ import 'package:zhixing/$path/net/$3_net.dart';
 class MaterialsController extends GetxController {
   MaterialsController();
 
-  Rx<MaterialsData> rxData = Rx<MaterialsData>();
+  Rx<MaterialsData> rxData = Rx<MaterialsData>(MaterialsData());
 
   getData() async {
     // [net]
