@@ -1,18 +1,18 @@
 import { message } from 'antd';
 import {
-  SAVE_CREATE,
-  SAVE_CREATE_PARAMS,
-  INIT_CREATE_PARAMS,
-  SAVE_TABLE,
-  SAVE_SEARCH_PARAMS,
+  MATERIALS_SAVE_CREATE,
+  MATERIALS_SAVE_CREATE_PARAMS,
+  MATERIALS_INIT_CREATE_PARAMS,
+  MATERIALS_SAVE_TABLE,
+  MATERIALS_SAVE_SEARCH_PARAMS,
 } from './type';
 import S from './../apis';
 
-export const saveCreate = payload => ({ type: SAVE_CREATE, payload });
-export const saveTable = payload => ({ type: SAVE_TABLE, payload });
-export const saveCreateParams = payload => ({ type: SAVE_CREATE_PARAMS, payload });
-export const initCreateParams = payload => ({ type: INIT_CREATE_PARAMS, payload });
-export const saveSearchParams = payload => ({ type: SAVE_SEARCH_PARAMS, payload });
+export const saveCreate = payload => ({ type: MATERIALS_SAVE_CREATE, payload });
+export const saveTable = payload => ({ type: MATERIALS_SAVE_TABLE, payload });
+export const saveCreateParams = payload => ({ type: MATERIALS_SAVE_CREATE_PARAMS, payload });
+export const initCreateParams = payload => ({ type: MATERIALS_INIT_CREATE_PARAMS, payload });
+export const saveSearchParams = payload => ({ type: MATERIALS_SAVE_SEARCH_PARAMS, payload });
 
 export const getTableList = (payload = {}) => async (dispatch, getState) => {
   const { materials: state } = getState();
