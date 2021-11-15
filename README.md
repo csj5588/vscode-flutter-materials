@@ -56,7 +56,7 @@ Flutter物料 vscode插件，可以一键生成物料
 | fl_dispose | dispose语法片段 |
 | fl_didmount | addPostFrameCallback语法片段 |
 
-## JsonToDart
+## JsonToDart(Support Null Safety)
 
 ### Use
 
@@ -72,6 +72,7 @@ command/ctrl + shift + p
 - 物料名称统一替换
 - 物料路径统一梳理
 - 支持下划线名称，在物料指定位置会转化为驼峰
+- 物料、Json2Dart支持null safety
 
 ## Connect Me
 
