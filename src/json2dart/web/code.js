@@ -199,7 +199,7 @@ $(function () {
 
         if (typeof inner === 'object') {
           fromJsonLines.push(`${makeBlank(count * 3)}v.forEach((v) {\n${makeBlank(count * 4)}arr${count}.add(${className}.fromJson(v));\n${makeBlank(count * 3)}});`);
-          toJsonLines.push(`${makeBlank(count * 3)}v${shouldNullSafe ? '!' : ''}.forEach((v) {\n${makeBlank(count * 4)}arr${count}.add(v${shouldNullSafe ? '!' : ''}.toJson());\n${makeBlank(count * 3)}});`);
+          toJsonLines.push(`${makeBlank(count * 3)}v${shouldNullSafe ? '?' : ''}.forEach((v) {\n${makeBlank(count * 4)}arr${count}.add(v${shouldNullSafe ? '?' : ''}.toJson());\n${makeBlank(count * 3)}});`);
         } else {
           let toType = 'v';
           if (typeof inner === 'boolean') {
@@ -222,14 +222,14 @@ $(function () {
           }
           if ((typeof inner === 'string') || (typeof inner === 'number') || (typeof inner === 'boolean')) {
             fromJsonLines.push(`${makeBlank(count * 3)}v.forEach((v) {\n${makeBlank(count * 4)}arr${count}.add(${toType});\n${makeBlank(count * 3)}});`);
-            toJsonLines.push(`${makeBlank(count * 3)}v${shouldNullSafe ? '!' : ''}.forEach((v) {\n${makeBlank(count * 4)}arr${count}.add(v);\n${makeBlank(count * 3)}});`);
+            toJsonLines.push(`${makeBlank(count * 3)}v${shouldNullSafe ? '?' : ''}.forEach((v) {\n${makeBlank(count * 4)}arr${count}.add(v);\n${makeBlank(count * 3)}});`);
           }
         }
 
         while (count) {
           fromJsonLines.unshift(`${makeBlank(count * 2)}v.forEach((v) {\n${makeBlank(count * 3)}final arr${count} = ${genericStringGenerator(innerClass, total - count).slice(4)}[];`);
           fromJsonLines.push(`${makeBlank(count * 3)}arr${count - 1}.add(arr${count});\n${makeBlank(count * 2)}});`);
-          toJsonLines.unshift(`${makeBlank(count * 2)}v${shouldNullSafe ? '!' : ''}.forEach((v) {\n${makeBlank(count * 3)}final arr${count} = [];`);
+          toJsonLines.unshift(`${makeBlank(count * 2)}v${shouldNullSafe ? '?' : ''}.forEach((v) {\n${makeBlank(count * 3)}final arr${count} = [];`);
           toJsonLines.push(`${makeBlank(count * 3)}arr${count - 1}.add(arr${count});\n${makeBlank(count * 2)}});`);
           count--;
         }
@@ -262,9 +262,9 @@ $(function () {
         let toJsonLines = [];
 
         let shouldUsingJsonKey = $('#usingJsonKeyCheckBox').prop('checked');
-        let shouldNullSafe = $('#nullSafeCheckBox').prop('checked');
+        let shouldNullSafe = true;
         let isJsonKeyPrivate = $('#jsonKeyPrivateCheckBox').prop('checked');
-        let shouldConvertSnakeToCamel = $('#camelCheckBox').prop('checked');
+        let shouldConvertSnakeToCamel = true;
         let shouldEnhanceFaultTolerance = $('#faultToleranceCheckBox').prop('checked');
 
         let className = `${prefix}${uppercaseFirst(baseClass)}`;
@@ -318,7 +318,7 @@ $(function () {
                 let { fromJsonLinesJoined, toJsonLinesJoined } = getIterateLines(element, subClassName, key, legalKey, jsonKey, shouldNullSafe);
                 let genericString = genericStringGenerator(innerClass, count);
                 if (shouldNullSafe) {
-                  genericString = genericString.replaceAll('>', '?>') + '?';
+                  genericString = genericString.replace(new RegExp('>', 'gm'), '?>') + '?';
                 }
                 propsLines.push(`  ${genericString} ${legalKey};\n`);
                 fromJsonLines.push(fromJsonLinesJoined);
@@ -333,7 +333,7 @@ $(function () {
                 propsLines.push(`  ${subClassName}${shouldNullSafe ? '?' : ''} ${legalKey};\n`);
                 let typeCheck = shouldEnhanceFaultTolerance ? ` && (json[${jsonKey}] is Map)` : '';
                 fromJsonLines.push(`    ${legalKey} = (json[${jsonKey}] != null${typeCheck}) ? ${subClassName}.fromJson(json[${jsonKey}]) : null;\n`);
-                toJsonLines.push(`    if (${legalKey} != null) {\n      data[${jsonKey}] = ${thisData}${legalKey}${shouldNullSafe ? '!' : ''}.toJson();\n    }\n`);
+                toJsonLines.push(`    if (${legalKey} != null) {\n      data[${jsonKey}] = ${thisData}${legalKey}${shouldNullSafe ? '?' : ''}.toJson();\n    }\n`);
               }
             }
             else {
