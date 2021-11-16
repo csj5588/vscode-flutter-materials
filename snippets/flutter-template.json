@@ -46,5 +46,68 @@
 			""
 		],
 		"description": "生成Flutter StateFulWidgetLess"
+	},
+	"Flutter Column-Fixed-Layout": {
+		"scope": "dart",
+		"prefix": "fl_top_scroll_footer",
+		"body": [
+			"Column(",
+			"  children: [",
+			"    Text('Top Fixed')",
+			"    Expanded(",
+			"      child: SingleChildScrollView(",
+			"        child: Column(",
+			"          children: [",
+			"            Text('Scroll Content')",
+			"          ]",
+			"        ),",
+			"      ),",
+			"    ),",
+			"    Text('Footer Fixed')",
+			"  ],",
+			");",
+			""
+		],
+		"description": "上下定位，中间滚动布局"
+	},
+	"Flutter NestedScrollView": {
+		"scope": "dart",
+		"prefix": "fl_nested_scroll",
+		"body": [
+			"Column(",
+			"  children: [",
+			"    Text('Top Fixed'),",
+			"    Expanded(",
+			"      child: NestedScrollView(",
+			"        headerSliverBuilder: (context, innerBoxIsScrolled) {",
+			"          return [",
+			"            SliverToBoxAdapter(",
+			"              child: Text('Nested Top')",
+			"            ),",
+			"          ];",
+			"        },",
+			"      body: Text('Nested Content'),",
+			"    ))",
+			"  ],",
+			"),"
+		],
+		"description": "Nested Scroll （嵌套滚动）布局"
+	},
+	"Flutter Flex": {
+		"scope": "dart",
+		"prefix": "fl_flex",
+		"body": [
+			"Flex(",
+			"  direction: Axis.horizontal,",
+			"  children: <Widget>[",
+			"    Expanded(",
+			"      flex: 1,",
+			"      child: Text('Flex Container')",
+			"    ),",
+			"    Text('Fixed Container')",
+			"  ],",
+			")"
+		],
+		"description": "Flex布局"
 	}
 }

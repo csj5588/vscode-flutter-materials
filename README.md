@@ -39,9 +39,15 @@ Flutter物料 vscode插件，可以一键生成物料
 | --- | --- |
 | fl_ful_widget | 完整fulWidget片段 |
 | fl_less_widget | 完整lessWidget片段 |
+| fl_top_scroll_footer | 上下定位，中间滚动布局 |
+| fl_nested_scroll | 嵌套滚动布局 |
+| fl_flex | Flex自适应布局 |
+
+___
 
 | 组件代码片段命令 | 描述 |
 | --- | --- |
+| fl_scaffold | Scaffold组件片段 |
 | fl_text | Text组件片段 |
 | fl_tabbar | TabBar组件片段 |
 | fl_row | Row组件片段 |
@@ -50,11 +56,14 @@ Flutter物料 vscode插件，可以一键生成物料
 | fl_container | Container组件片段 |
 | fl_expanded | Expanded组件片段 |
 
+___
+
 | 语法代码片段命令 | 描述 |
 | --- | --- |
 | fl_initstate | initState语法片段 |
 | fl_dispose | dispose语法片段 |
 | fl_didmount | addPostFrameCallback语法片段 |
+| fl_didupdate | didUpdateWidget语法片段 |
 
 ## JsonToDart(Support Null Safety)
 

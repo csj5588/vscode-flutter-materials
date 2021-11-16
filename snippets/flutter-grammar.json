@@ -33,5 +33,16 @@
 			"});"
 		],
 		"description": "addPostFrameCallback(didmount)语法"
+	},
+	"Flutter-Grammar-DidUpdate": {
+		"scope": "dart",
+		"prefix": "fl_didupdate",
+		"body": [
+			"@override",
+			"void didUpdateWidget(covariant FortuneMapWidget oldWidget) {",
+			"  super.didUpdateWidget(oldWidget);",
+			"}"
+		],
+		"description": "didUpdateWidget语法"
 	}
 }
